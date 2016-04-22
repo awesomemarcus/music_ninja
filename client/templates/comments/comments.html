@@ -1,0 +1,21 @@
+<template name="comment">
+  <div class="comment-box">
+    {{#each comments}}
+    <div class="comment-item">
+      <img src="{{getAvatar user_id}}" width="32px" class="pull-left" alt="">
+      <div class="col-md-11">
+        <p>{{comment}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  <div class="comment-input">
+    <div class="col-md-12">
+      <form action="" id="form-comment">
+        <div class="form-group">
+          <input type="text" class="form-control" name="comment" id="comment" placeholder="Comment here...">
+        </div>
+      </form>
+    </div>
+  </div>
+</template>

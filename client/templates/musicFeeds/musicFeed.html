@@ -1,0 +1,67 @@
+<template name="musicFeed">
+
+    {{#each spotifySearch}}
+    <!-- {{#if spotify}} -->
+    <div class=" row item-box">
+      <div class="col-md-6 col-md-offset-3 song-item">
+        <div class="song-wrapper">
+          <div class="header">
+            <h3>{{musicDetails.title}}</h3>
+
+            <div class="profile-img">
+              <img src="{{getAvatar user_id}}"  id="" alt="">
+            </div>
+          </div>
+          <div class="img-wrapper">
+            <img class="center-block img-responsive" src="{{musicDetails.image}}" width="200px" height="200px" alt="">
+             {{#if spotify}}
+            <video controls name="media">
+              <source src="{{musicDetails.uri}}" type="audio/mpeg">
+            </video>
+            {{else}}
+            <div class="play-btn-absolute-box">
+              <div class="relative-wrapper">
+                <button id="play">play</button>
+              </div>
+            </div>
+             {{/if}}
+          </div>
+        </div>
+        <div class="footer meta">
+          <ul class="list-inline">
+            <li>
+              <p><a href=""><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>&nbsp; <span>100</span></p>
+            </li>
+            <li>
+              <p><a href=""><i class="fa fa-thumbs-down" aria-hidden="true"></i></a>&nbsp; <span>80</span></p>
+            </li>
+            <li>
+              <p><a href=""><i class="fa fa-comment-o" aria-hidden="true"></i></a>&nbsp; <span>{{countComment _id}}</span></p>
+            </li>
+            <li class="pull-right">
+              <div class="btn-group" role="group">
+                <button type="button" id="meta-drop" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <p><a href=""><i class="fa fa-chevron-down" aria-hidden="true"></i></a></p>
+                </button>
+                <ul class="dropdown-menu pull-right">
+                  <li><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i>Youtube</a></li>
+                  <li><a href="#"><i class="fa fa-download" aria-hidden="true"></i>Download</a></li>
+                  <li><a href=""><i class="fa fa-plus" aria-hidden="true"></i>Add to List</a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          </div>
+          <!--  Comments Here-->
+          {{> comment}}
+      </div>
+    </div> <!-- end or row -->
+    <!-- {{else}}
+      <div id="{{_id}}">
+        {{_id}}
+      </div>
+      {{loudSoundCloudIfram}}
+
+    {{/if}} -->
+    {{/each}}
+</template>
