@@ -1,0 +1,34 @@
+<template name="add_song">
+  <div class="container">
+    <div class="row item-box">
+      <div class="col-md-12 song-item">
+        <div class="song-wrapper">
+          <div class="header">
+            <h3>Timber</h3>
+            <p><strong>Artist:</strong> Pitbull</p>
+          </div>
+          <div class="img-wrapper">
+            <img class="center-block img-responsive" src="https://i.scdn.co/image/de50cbd4f0e62be8d4ffd11c7d6f3c59d964bdb6" alt="">
+            <video controls name="media">
+              <source src="https://p.scdn.co/mp3-preview/ecb1639c58ceb6311919373fe56399e3ec242045" type="audio/mpeg">
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="form-wrapper">
+      <form action="" class="form-add-song" id="form-add-song">
+        <label for="youtube" class="sr-only">Add Mood</label>
+        <select name="add_mood" id=""></select>
+        <label for="youtube" class="sr-only">Youtube</label>
+        <input type="text" id="youtube" class="form-control" name="youtube" placeholder="Youtube Link">
+        <label for="upload_audio">Upload Video/Audio</label>
+        <input type="file" id="upload_audio" class="form-control" name="upload_audio">
+        <label for="add_lyrics" class="sr-only">Add Lyrics</label>
+        <textarea name="add_lyrics" id="add_lyrics" class="form-control" rows="3" placeholder="Add Lyrics"></textarea>
+        <hr>
+        <button id="add_button" class="btn btn-primary">Add Song</button>
+      </form>
+    </div>
+  </div>
+</template>
